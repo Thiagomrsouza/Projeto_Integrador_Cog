@@ -3,42 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
     <title>Login CogniZZone</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Seus estilos existentes */
-        
-body {
-            background-color: #e8e8e6;
-            color: #000047;
-        }
-        .login-container {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .login-form {
-            background-color: #ffffff;
-            padding: 20px; /* Reduzido o padding */
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 250px; /* Largura reduzida do formulário */
-        }
-        .btn-primary {
-            background-color: #2596be;
-            border-color: #2596be;
-        }
-        .btn-primary:hover {
-            background-color: #1f7ca0;
-            border-color: #1f7ca0;
-        }
-
-        .form-group {
-            margin-bottom: 10px; /* Espaçamento reduzido entre campos */
-        }
-    </style>
-</head>
+        </head>
 <body>
     <div class="container login-container">
         <div class="login-form">
@@ -71,7 +40,7 @@ body {
             var password = document.getElementById('password').value;
 
             if(username === 'adm' && password === 'adm') {
-                window.location.href = 'view_rooms.html'; // Substitua por sua URL de destino
+                window.location.href = 'view_rooms.html';
             } else {
                 alert('Login ou senha incorretos!');
             }
