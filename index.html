@@ -1,1 +1,82 @@
-g
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login CogniZZone</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Seus estilos existentes */
+        
+body {
+            background-color: #e8e8e6;
+            color: #000047;
+        }
+        .login-container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-form {
+            background-color: #ffffff;
+            padding: 20px; /* Reduzido o padding */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 250px; /* Largura reduzida do formulário */
+        }
+        .btn-primary {
+            background-color: #2596be;
+            border-color: #2596be;
+        }
+        .btn-primary:hover {
+            background-color: #1f7ca0;
+            border-color: #1f7ca0;
+        }
+
+        .form-group {
+            margin-bottom: 10px; /* Espaçamento reduzido entre campos */
+        }
+    </style>
+</head>
+<body>
+    <div class="container login-container">
+        <div class="login-form">
+            <h5 class="text-center">CogniZZone</h5>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Login</label>
+                    <input type="text" class="form-control" id="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" class="form-control" id="password">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                <div class="text-center mt-2">
+                    <a href="#">Cadastre-se</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if(username === 'adm' && password === 'adm') {
+                window.location.href = 'view_rooms.html'; // Substitua por sua URL de destino
+            } else {
+                alert('Login ou senha incorretos!');
+            }
+        });
+    </script>
+</body>
+</html>
+
